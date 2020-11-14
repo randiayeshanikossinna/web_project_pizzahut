@@ -6,4 +6,12 @@
    $gender = $_POST['gender'];
    $telephone = $_POST['tele'];
    $country = $_POST['country'];
+
+   if(!empty($fname)|| !empty($lname) || !empty($id) || !empty($email) || !empty($gender) || !empty($telephone) || !empty($country){
+      
+   }
+   else{
+      echo "All field are required to fill";
+      die();
+   }
 ?>
