@@ -10,6 +10,7 @@
            <li><a href="#">Places</a></li>
            <li><a href="#">Contact Us</a></li>
          </ul> 
+         
      </div>
      <div class="context">
      <div class="form"> <br><br>
