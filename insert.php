@@ -12,6 +12,7 @@
    }
    else{
       echo "All field are required to fill";
+   
       die();
    }
 ?>
