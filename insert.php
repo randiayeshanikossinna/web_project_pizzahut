@@ -1,5 +1,5 @@
 <?php
-//assign veriables for labels
+/*assign veriables for labels*/
    $fname = $_POST['fname'];
    $lname = $_POST['lname'];
    $id = $_POST['id'];
@@ -8,21 +8,21 @@
    $telephone = $_POST['telephone'];
    $country = $_POST['country'];
 
-//check the all the requirements are fullfiled
+/*check the all the requirements are fullfiled */
    if(!empty($fname) || !empty($lname) || !empty($id) || !empty($email) || !empty($gender) || !empty($telephone) || !empty($country)){
      $host="localhost"; 
      $dbusername="root";
      $dbpassword="";
      $dbname="pizzahut_customer";
 
-     //create connection
+     /*create connection*/
      $conn= new mysqli($host,$dbusername,$dbpassword,$dbname);
 
      if(mysqli_connect_error()){
         die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
 
      }else{
-        //check insert email is already here or not
+        /*check insert email is already here or not*/
         $SELECT ="SELECT email From customer Where Email =? Limit 1";
         $INSERT ="INSERT Into customer (Fname,Lname,Id,Email,Gender,Telephone,Country) values (?,?,?,?,?,?,?)";
 
@@ -43,7 +43,7 @@
    }else{
       echo "Someone already register using this email";
    }
-//close the db conncetion 
+/*close the db conncetion */
    $stmt->close();
    $conn->close();
 
