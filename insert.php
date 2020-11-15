@@ -33,7 +33,7 @@
         if($rnum==0){
            $stmt->close();
          $stmt = $conn->prepare($INSERT);
-      $stmt->bind_param("ssssii",$fname,$lname,$id,$email,$gender,$telephone,$country) ;
+      $stmt->bind_param("ssissis",$fname,$lname,$id,$email,$gender,$telephone,$country) ;
    $stmt->execute();
     echo "New record inserted sucessfully";
    }else{
