@@ -43,7 +43,7 @@
    }else{
       echo "Someone already register using this email";
    }
-//close the db conncetion
+//close the db conncetion 
    $stmt->close();
    $conn->close();
 
